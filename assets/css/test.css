@@ -1,0 +1,14 @@
+h1.logo {
+  font-family: logo-f;
+  font-size: 1.8rem;
+}
+
+h1.logo span {
+  font-size: 3.1rem;
+}
+
+@font-face {
+  font-family: logo-f;
+  src: url(../fonts/CinzelDecorative-Bold.ttf);
+}
+/*# sourceMappingURL=test.css.map */

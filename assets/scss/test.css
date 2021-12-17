@@ -1,0 +1,29 @@
+body {
+  background-color: #323133 !important;
+}
+
+.navbar {
+  z-index: 999;
+  position: fixed;
+}
+
+.navbar:hover {
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 255, 255, 0.2)), to(rgba(255, 255, 255, 0.1)));
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+}
+
+.navbar .navbar-brand {
+  color: #bf263c !important;
+  font-family: logo-f;
+  font-size: 1.2rem;
+}
+
+.navbar .navbar-brand span {
+  font-size: 1.5rem;
+}
+
+@font-face {
+  font-family: logo-f;
+  src: url(../fonts/CinzelDecorative-Bold.ttf);
+}
+/*# sourceMappingURL=test.css.map */

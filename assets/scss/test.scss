@@ -1,0 +1,38 @@
+// Variables
+$charcoal: #323133;
+$ruby: #bf263c;
+$plum: #6a50a7;
+$teal: #7db1b1;
+$straw: #edc341;
+
+body {
+	background-color: $charcoal !important;
+}
+
+.navbar {
+	z-index: 999;
+	position: fixed;
+
+	&:hover {
+		background: linear-gradient(
+			to right bottom,
+			rgba(255, 255, 255, 0.2),
+			rgba(255, 255, 255, 0.1)
+		);
+	}
+
+	.navbar-brand {
+		color: $ruby !important;
+		font-family: logo-f;
+		font-size: 1.2rem;
+
+		span {
+			font-size: 1.5rem;
+		}
+	}
+}
+
+@font-face {
+	font-family: logo-f;
+	src: url(../fonts/CinzelDecorative-Bold.ttf);
+}
