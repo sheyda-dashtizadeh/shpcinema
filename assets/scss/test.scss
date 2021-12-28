@@ -1,17 +1,25 @@
+@import url(fonts.css);
+
 // Variables
-$charcoal: #323133;
+$dark-color: #0e0e0e;
+$light-color: #fafafa;
+$charcoal: #211f1f;
 $ruby: #bf263c;
 $plum: #6a50a7;
+$light-plum: #8067b7;
 $teal: #7db1b1;
 $straw: #edc341;
+$transition-width: width 0.35s ease-in-out;
+$transition-height: height 0.1s ease-in-out;
 
 body {
-	background-color: $charcoal !important;
+	background-color: $dark-color !important;
 }
 
+///////////////// navbar /////////////
 .navbar {
 	z-index: 999;
-	position: fixed;
+	position: fixed !important;
 
 	&:hover {
 		background: linear-gradient(
@@ -21,18 +29,34 @@ body {
 		);
 	}
 
-	.navbar-brand {
+	&-brand {
 		color: $ruby !important;
-		font-family: logo-f;
+		font-family: cinzel-bl;
 		font-size: 1.2rem;
 
 		span {
-			font-size: 1.5rem;
+			font-size: 2.5rem;
 		}
 	}
+
+	&-nav {
+		.nav-link {
+			font-family: poppi-md;
+			color: rgba($light-color, 0.6) !important;
+			// font-size: 1.3rem;
+
+			&:hover {
+				color: rgba($light-color, 1) !important;
+			}
+		}
+	}
+
+	// &-light &-toggler {
+	// 	color: $plum;
+	// 	border-color: $light-plum;
+	// }
 }
 
-@font-face {
-	font-family: logo-f;
-	src: url(../fonts/CinzelDecorative-Bold.ttf);
+.fas {
+	color: rgba($light-color, 0.85) !important;
 }
