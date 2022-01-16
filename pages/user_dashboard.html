@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+    <!------------ links ----------->
+		<link rel="stylesheet" href="../assets/aos/aos.css" />
+		<link rel="stylesheet" href="../assets/css/animate.min.css">
+		<link rel="stylesheet" href="../assets/scss/dashboard.css">
+		<link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+
+		<script src="https://kit.fontawesome.com/166560c630.js"crossorigin="anonymous"></script> 
+		<link rel="shortcut icon" href="../assets/img/logo.ico" type="image/x-icon">
+		
+		<title>Account</title>
+	</head>
+	<body>
+		<!------------------ Start Navbar ---------------------->
+		<nav class="navbar navbar-expand-md navbar-light w-100">
+			<div class="container">
+				<!-- logo -->
+				<a class="navbar-brand" href="#"><span>SHP</span> Cinema</a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<!-- links -->
+				<div class="collapse navbar-collapse" 	id="navbarSupportedContent">
+					
+					<ul class="navbar-nav  m-auto mb-2 mb-lg-2">
+						<li class="nav-item">
+							<a class="nav-link" aria-current="page" href="home.html#home">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="home.html#movie">Movies</a>
+						</li>
+					
+						<li class="nav-item">
+							<a class="nav-link" href="hoem.html#about">About Us</a>
+						</li>
+
+						</li>
+					</ul>
+
+					<!-- Quick menu -->
+					<form class="d-flex justify-content-center">
+
+						<button type="button" class="btn search d-block navbar-btn" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search"></i></button>
+						<a class="btn" href="register.html"><i class="fas fa-user"></i>
+						</a>
+						
+					</form>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Search Modal -->
+		<div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+  			<div class="modal-dialog">
+    			<div class="modal-content">
+       				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      				<div class="modal-body">
+                    	<form class="navbar-form " role="search">
+							<input type="text" class="form-control" placeholder="Search">
+                      		<button type="submit" class="btn">Search</button>
+                    	</form>
+     				</div>
+      			</div>
+			</div>
+		</div>
+		<!------------------ End Navbar ---------------------->
+		
+		<!------------------ Start User Account ---------------------->
+		<div class="user">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3 col-sm-12 col-xs-12">
+
+					<!------ Start Dashboard------->
+						<div class="user-information" data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom">
+							<div class="user-img">
+								<img src="../assets/img/Avatar_icon.png" alt="avatar" />
+							</div>
+							<div class="dashboard-item user-detail">
+								<p>Account Details</p>
+								<ul class="list-unstyled">
+									<li >
+										<a href="#myprofile" class="dash-link" onclick="toggler(this)" >My Profile</a>
+									</li>
+									<li>
+										<a href="#purchased" class="dash-link"  onclick="toggler(this)">Tickets Purchased</a>
+									</li>
+								</ul>
+							</div>
+							<div class="dashboard-item user-update">
+								<p>Others</p>
+								<ul class="list-unstyled">
+									<li><a href="#change" class=" dash-link" onclick="toggler(this)" >Change password</a></li>
+									<li><a class="logout" href="register.html">Log out</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!------ End Dashboard------->
+					
+					<div class="col-md-9 col-sm-12 col-xs-12">
+						
+						<!------ Strat User Profile ------->
+						<div class="form-info user-pro" id="myprofile"action="#">
+							<h4>My Profile</h4>
+							<div class="row">
+								<div class="col-md-6 user-pro-item">
+									<label>Username</label>
+									<p class="id">john9234</p>
+								</div>
+								<div class="col-md-6 user-pro-item">
+									<label>Phone</label>
+									<p class="email">09123456789</p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6 user-pro-item">
+									<label>Full Name</label>
+									<p class="fullname">John Doe</p>
+								</div>
+							</div>
+						</div>
+						<!------ End User Profile ------->
+						
+						
+						<!------ Start Resset Password ------->
+						<div class="form user-pro" id="change">
+							<form action="#" class="password">
+								<h4>Change Password</h4>
+								<div class="row">
+									<div class="col-md-6 form-it">
+										<label>Old Password</label>
+										<input type="text" placeholder="**********" />
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-6 form-it">
+										<label>New Password</label>
+										<input type="text" placeholder="***************" />
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-6 form-it">
+										<label>Confirm New Password</label>
+										<input type="text" placeholder="*************** " />
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-2 form-it">
+										<input class="btn submit" type="submit" value="change" />
+									</div>
+								</div>
+							</form>
+						</div>
+						<!------ End Resset Password ------->
+						
+						<!------ Strat Purchased Tickets ------->
+						<div class="purchased user-pro" id="purchased"  >
+							<h4>Tickets</h4>
+
+							<!------ Strat Ticket ------->
+							<div class="ticket d-flex justify-content-evenly">
+								<div class="ticket-cover col-md-3 col-sm-12 col-xs-12"> 
+									<img src="../assets/img/spiderman-NowWayHome.png" class="">
+									<p class="ticket-number">#20030220</p>
+								</div>
+
+								<!-- Ticket Information -->
+								<div class="ticket-info col-md-8 col-sm-12 col-xs-12 d-felx justify-content-between flex-column align-items-center">
+									<p class="date  d-felx justify-content-around align-items-center">
+										<span class="date-day">monday</span>
+										<span class="date-month">JUNE 10TH</span>
+										<span class="date-year">2022</span>
+									</p>
+									<h1 class="show-name">
+										Titanic
+									</h1>
+									<p class="time">20:00</p>
+									
+									<p class="location d-felx justify-content-between align-items-center">SHP Cinema, Hall <span class="hall">01</span></p>
+								</div>
+							</div>
+							<!------ End Ticket ------->
+
+							<!------ Strat Ticket ------->	
+							<div class="ticket d-flex justify-content-evenly">
+								<div class="ticket-cover col-md-3 col-sm-12 col-xs-12"> 
+									<img src="../assets/img/spiderman-NowWayHome.png" class="">
+										<p class="ticket-number">#20030220</p>
+								</div>
+
+								<!-- Ticket Information -->
+								<div class="ticket-info col-md-8 col-sm-12 col-xs-12 d-felx justify-content-between flex-column align-items-center">
+									<p class="date  d-felx justify-content-around align-items-center">
+										<span class="date-day">monday</span>
+										<span class="date-month">JUNE 10TH</span>
+										<span class="date-year">2022</span>
+									</p>
+									<h1 class="show-name">
+										Titanic
+									</h1>
+									<p class="time">20:00</p>
+									
+									<p class="location d-felx justify-content-between align-items-center">SHP Cinema, Hall <span class="hall">01</span></p>
+								</div>
+							</div>
+							<!------ End Ticket ------->
+
+							<!------ Strat Ticket ------->	
+							<div class="ticket d-flex justify-content-evenly">
+								<div class="ticket-cover col-md-3 col-sm-12 col-xs-12"> 
+									<img src="../assets/img/spiderman-NowWayHome.png" class="">
+									<p class="ticket-number">#20030220</p>
+								</div>
+
+								<!-- Ticket Information -->
+								<div class="ticket-info col-md-8 col-sm-12 col-xs-12 d-felx justify-content-between flex-column align-items-center">
+									<p class="date  d-felx justify-content-around align-items-center">
+										<span class="date-day">monday</span>
+										<span class="date-month">JUNE 10TH</span>
+										<span class="date-year">2022</span>
+									</p>
+									<h1 class="show-name">
+										Titanic
+									</h1>
+									<p class="time">20:00</p>
+									
+									<p class="location d-felx justify-content-between align-items-center">SHP Cinema, Hall <span class="hall">01</span></p>
+								</div>
+							</div>
+							<!------ End Ticket ------->
+						</div>	
+						<!------ End Purchased Tickets ------->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!------------------ Start Footer ---------------------->
+			<footer class="footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-4 col-lg-5">
+							<div class="row">
+								
+								<!----- Start About Company ------>	
+								<div class="col-md-12 col-lg-9 mb-md-0 mb-4">
+									<h2 class="footer-heading">
+										<a class="navbar-brand" href="#"><span>SHP</span> Cinema</a>
+									</h2>
+									<p>
+										Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni quam corrupti debitis adipisci blanditiis repellendus, incidunt porro tempora possimus consectetur.
+									</p>
+
+									<!-- Social Media -->
+									<ul class="list-unstyled social d-flex justify-content-evenly">
+										<li><a href="#" class="py-1 d-block">Facebook</a></li>
+										<li><a href="#" class="py-1 d-block">Twitter</a></li>
+										<li><a href="#" class="py-1 d-block">Instagram</a></li>
+									</ul>
+								</div>
+								<!----- End About Company ------>	
+							</div>
+						</div>
+						<div class="col-md-8 col-lg-7">
+							<div class="row">
+								<!-- Section 1 -->
+								<div class="col-md-3 mb-md-0 mb-4 border-left">
+									<h2 class="footer-heading">Company</h2>
+									<ul class="list-unstyled">
+										<li><a href="register.html" class="py-1 d-block">Login</a></li>
+										<li><a href="#" class="py-1 d-block">Help &amp; Support</a></li>
+									</ul>
+								</div>
+								<!-- Section 2 -->
+								<div class="col-md-3 mb-md-0 mb-4 border-left">
+									<h2 class="footer-heading">About</h2>
+									<ul class="list-unstyled">
+										<li><a href="#about" class="py-1 d-block">Team</a></li>
+										<li><a href="#" class="py-1 d-block">Blog</a></li>
+									</ul>
+								</div>
+								<!-- Section 3 -->
+								<div class="col-md-3 mb-md-0 mb-4 border-left">
+									<h2 class="footer-heading">Legal</h2>
+								
+									<ul class="list-unstyled">
+										<li><a class="mr-md-3" href="#">Terms</a></li>
+										<li><a class="mr-md-3" href="#">Privacy</a></li>
+										<li><a class="mr-md-3" href="#">Compliances</a></li>
+									</ul>
+						
+								</div>
+								
+							</div>
+						</div>
+					</div>
+
+					<!------ Copyright------->
+					<div class="row mt-3 copyright">
+						<div class="col-md-6 col-lg-8">
+							<p class="copyright_text">
+								Copyright &copy;
+								<script>
+									document.write(new Date().getFullYear());
+								</script>
+								All rights reserve.
+							</p>
+						</div>
+					</div>
+				</div>
+			</footer>
+	<!------------------ End Footer ---------------------->
+
+    <!------------ scripts ----------->
+		
+     <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../assets/js/plugins/Swiper/swiper.esm.js"></script>
+	<script src="../assets/aos/aos.js"></script>
+	<script src="../assets/js/core/Dashboard.js"></script>
+	<script src="../assets/js/core/common.js"></script>
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+		AOS.init();
+	</script>
+		
+	</body>
+</html>

@@ -1,0 +1,272 @@
+@import "root";
+@import "mixins";
+
+.visiable {
+	display: block !important;
+}
+
+.user {
+	$grandParent: &;
+	padding-top: 130px;
+	margin-bottom: 10vh;
+
+	&-information {
+		border: $border-value;
+		margin-right: 30px;
+
+		border-radius: 5px;
+
+		#{selector-append($grandParent, "-img")} {
+			text-align: center;
+			padding: 30px 0 20px;
+
+			img {
+				width: 120px;
+				height: 120px;
+			}
+		}
+		#{selector-append($grandParent, "-update")} {
+			.logout {
+				display: inline-block;
+				background-color: $ruby;
+				width: 85px;
+				padding: 10px;
+				margin-top: 10px;
+				border-radius: 20px;
+				text-align: center;
+			}
+		}
+	}
+
+	&-pro {
+		color: rgba($light-color, 0.9);
+		padding: 30px;
+		border: $border-value;
+		background-color: rgba($light-color, 0.05);
+		display: none;
+
+		&-item {
+			margin-bottom: 10px;
+			label {
+				font-family: poppi-li;
+				color: $gray-color;
+				font-size: 0.8rem;
+				&::after {
+					content: ":";
+					font-size: 0.8rem;
+					color: $gray-color;
+					margin-left: 2px;
+				}
+			}
+
+			p {
+				margin: 0 10px;
+				display: inline-block;
+				font-family: poppi-md;
+
+				&:hover {
+					color: $ruby;
+					transition: 0.8s all ease-in-out;
+				}
+			}
+		}
+
+		.form-it {
+			margin: 10px 0;
+
+			label {
+				font-family: poppi-li;
+				color: $gray-color;
+				font-size: 0.8rem;
+			}
+
+			> input {
+				margin: 0 7px;
+				background-color: rgba($light-color, 0.05);
+				border: none;
+				border-radius: 3px;
+				color: $light-color;
+
+				&::placeholder {
+					padding-left: 5px;
+				}
+
+				&.submit {
+					display: inline-block;
+					background-color: $plum;
+					width: 85px;
+					padding: 10px;
+					margin-top: 10px;
+					border-radius: 20px;
+					text-align: center;
+					font-size: 0.9rem;
+
+					&:hover {
+						background-color: $light-plum;
+					}
+				}
+			}
+		}
+	}
+}
+
+.dashboard {
+	&-item {
+		border-top: $border-value;
+		padding: 20px;
+
+		p {
+			font-family: poppi-md;
+			color: $light-color;
+		}
+
+		.active-dash {
+			color: $plum !important;
+			font-weight: bold;
+		}
+	}
+}
+
+.ticket {
+	$grandParent: &;
+
+	color: $dark-color;
+	margin: 20px auto;
+	background: rgba($light-color, 0.9);
+	box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+	min-width: fit-content;
+
+	&-cover {
+		img {
+			height: 230px;
+			width: 230px;
+			margin: 20px 0;
+			text-align: center;
+		}
+		#{selector-append($grandParent, "-number")} {
+			padding: 5px;
+			font-size: 0.7rem;
+		}
+	}
+
+	&-info {
+		padding: 10px 30px;
+		text-align: center;
+	}
+
+	.date {
+		border-top: $border-value;
+		border-bottom: $border-value;
+		padding: 5px 0;
+		font-weight: 600;
+		font-family: poppi-md;
+		font-size: 0.9rem;
+
+		span {
+			width: 100px;
+			&:first-child {
+				text-align: left;
+			}
+
+			&:last-child {
+				text-align: right;
+			}
+		}
+
+		.date-month {
+			color: $ruby;
+			font-size: 1rem;
+		}
+	}
+
+	.show-name {
+		font-size: 2.5rem;
+		font-family: poppi-bl;
+		letter-spacing: 0.1em;
+		color: $plum;
+	}
+
+	.time {
+		color: $light-plum;
+		padding: 10px 0;
+		text-align: center;
+		font-weight: 700;
+	}
+
+	.location {
+		border-top: $border-value;
+		padding-top: 8px;
+		width: 100%;
+		font-family: poppi-li;
+		font-weight: 500;
+
+		.hall {
+			font-size: 1.2rem;
+			font-weight: 700;
+		}
+	}
+}
+
+.table {
+	$grandParent: &;
+	border-bottom: none !important;
+
+	&-head {
+		#{selector-append($grandParent, "-row")} {
+			color: $light-color;
+			font-family: poppi-md;
+			text-transform: capitalize;
+		}
+	}
+
+	&-body {
+		td {
+			color: rgba($light-color, 0.9);
+			font-family: poppi-md;
+			font-size: 0.85rem;
+
+			&.content {
+				font-size: 0.9rem;
+			}
+
+			&.remove,
+			&.edit {
+				&:hover > a i.fas {
+					font-size: 1rem;
+					color: $ruby !important;
+					transition: 0.8s all ease-in-out;
+				}
+			}
+		}
+	}
+}
+
+.admin {
+	&-add {
+		font-family: poppi-md;
+		font-size: 0.85rem !important;
+		color: $light-color !important;
+		background-color: $plum !important;
+
+		i {
+			font-size: 0.85rem !important;
+			padding-right: 10px;
+		}
+	}
+}
+
+.modal {
+	&-content {
+		background-color: $dark-color !important;
+	}
+
+	&-body {
+		.row {
+			margin: 20px;
+		}
+
+		label {
+			color: $light-color;
+		}
+	}
+}

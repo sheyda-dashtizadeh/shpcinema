@@ -1,0 +1,383 @@
+@import "root";
+body {
+	position: relative;
+}
+.hero {
+	height: 100vh;
+	width: 100%;
+	position: relative;
+
+	&-img {
+		height: 100%;
+		width: 100%;
+		filter: blur(6px);
+		background: url(../img/TheMatrixResurrections_hero.jpg) no-repeat;
+		background-position: center;
+		background-size: cover;
+		position: absolute;
+	}
+
+	> .container,
+	.row {
+		height: 80%;
+		margin: 10px auto !important;
+	}
+
+	.container {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	&_content {
+		padding-top: 12%;
+		z-index: 2;
+		text-align: center;
+		color: $light-color;
+
+		.title {
+			text-transform: uppercase;
+			font-family: ubunto-md;
+		}
+
+		.breadcumb li {
+			display: inline-block;
+			font-family: poppi-md;
+			font-size: 0.8rem;
+
+			> a {
+				text-decoration: none;
+				color: $ruby;
+
+				&::after {
+					content: " \02C3";
+					font-family: poppi-md;
+					margin: 0 10px;
+				}
+			}
+		}
+	}
+}
+
+.movie {
+	$grandParent: &;
+
+	margin: 20px 0;
+
+	&-item {
+		color: rgba($light-color, 0.85);
+		border-bottom: $border-value;
+
+		p {
+			display: inline-block;
+
+			&.movie-director:hover {
+				color: $plum;
+				transition: 0.8s all ease-in-out;
+			}
+		}
+
+		label {
+			font-family: poppi-li;
+			margin-right: 10px;
+			&::after {
+				content: ":";
+			}
+		}
+		#{selector-append($grandParent, "-star")} {
+			display: inline-block;
+			> p {
+				margin-right: 4px;
+				&:hover {
+					color: $plum;
+					transition: 0.8s all ease-in-out;
+				}
+				&::after {
+					content: " \00B7";
+					margin-left: 4px;
+				}
+			}
+		}
+		&.comment-box {
+			form {
+				margin: 10px 0;
+
+				textarea {
+					height: 100px;
+					color: $charcoal;
+					border-radius: 10px;
+					font-family: poppi-li;
+					font-size: 1rem;
+					padding: 10px;
+
+					&::placeholder {
+						color: $charcoal !important;
+					}
+				}
+
+				button {
+					border: none;
+					border-radius: 20px;
+					background-color: $ruby;
+					color: $light-color;
+					font-family: poppi-li;
+					width: 90px;
+					padding: 5px;
+					margin: 20px 30px;
+				}
+			}
+
+			.comment {
+				position: relative;
+				$grandParent: "comment";
+
+				#{selector-append(".user-",$grandParent)} {
+					position: relative;
+					&:last-child {
+						border-bottom: none;
+					}
+					&:hover span.username {
+						color: $plum;
+						font-size: 1rem;
+						font-weight: bold;
+						transition: 0.9s all ease-in-out;
+					}
+
+					.comment-body {
+						.comment-content {
+							padding: 10px;
+							margin: 0;
+							border-radius: 5px;
+							background-color: rgba($light-color, 0.05);
+						}
+						.attribution {
+							font-size: 0.859rem;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&-cover {
+		img {
+			width: 100%;
+		}
+	}
+
+	&-content {
+		height: fit-content;
+		margin-top: 25vh;
+		color: $charcoal;
+		font-family: poppi-md !important;
+		font-weight: bold;
+
+		.title {
+			color: $charcoal;
+			font-family: poppi-bl !important;
+			text-shadow: 0px 3px 0px rgba($light-color, 0.4),
+				0px 14px 10px rgba(0, 0, 0, 0.15), 0px 24px 2px rgba(0, 0, 0, 0.1),
+				0px 24px 30px rgba(0, 0, 0, 0.1);
+		}
+
+		.year {
+			font-size: 1rem;
+		}
+
+		.inf {
+			margin: 20px 0;
+			.time_length {
+				margin-right: 4px;
+				border-right: 1px solid $charcoal;
+				padding-right: 10px;
+			}
+		}
+		.rating {
+			color: $charcoal;
+		}
+	}
+}
+
+.buy {
+	$grandParent: &;
+
+	padding-top: 20px;
+
+	.row {
+		gap: 2%;
+	}
+
+	.ticket {
+		border: $border-value;
+		width: 190px;
+		margin: 10px 0;
+		padding-bottom: 40px;
+		text-align: center;
+
+		> p {
+			display: block;
+		}
+
+		.week {
+			color: $plum;
+			font-size: 1.5rem;
+			font-weight: bolder;
+		}
+
+		.date {
+			font-size: 0.9rem;
+		}
+
+		.inf {
+			font-size: 0.7rem;
+
+			.time {
+				padding-right: 7px;
+				margin-right: 7px;
+				border-right: $border-value;
+			}
+
+			.hall {
+				font-size: 0.9rem;
+				font-weight: bold;
+			}
+		}
+
+		.price {
+			span {
+				font-size: 1.5rem;
+				font-weight: bold;
+				text-shadow: -5px 5px 5px $light-plum;
+			}
+		}
+	}
+
+	&-header {
+		align-items: center;
+		margin-bottom: 10px;
+
+		#{selector-append($grandParent, "-view")} {
+			background-color: $ruby;
+			border-radius: 1.3rem;
+			padding: 10px 20px;
+		}
+	}
+}
+
+.add-to-cart {
+	background-color: $plum;
+	padding: 10px;
+	border-radius: 3px;
+
+	i {
+		margin-right: 5px;
+	}
+}
+.cart {
+	position: fixed;
+	background-color: $charcoal;
+	width: 400px;
+	max-width: 70%;
+	height: 100vh;
+	top: 0;
+	right: 0;
+	box-shadow: -2px 0 4px rgba(0, 0, 0, 0.15);
+	overflow: hidden;
+	transform: translate(500px, 0);
+	transition: transform 250ms ease-in-out;
+	z-index: 120;
+
+	body.open & {
+		transform: translate(0, 0);
+	}
+
+	&-header {
+		position: absolute;
+		background-color: rgba($dark-color, 0.85);
+		width: 100%;
+		padding: 15px;
+		top: 0;
+		left: 0;
+		overflow: hidden;
+		z-index: 2;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+	}
+	&-text {
+		float: right;
+	}
+
+	&-title {
+		font-size: 1.1rem;
+		line-height: 40px;
+		margin: 0;
+		float: left;
+	}
+	&-products {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		padding: 70px 0;
+		overflow-x: hidden;
+		overflow-y: scroll;
+		z-index: 1;
+
+		article {
+			padding: 15px;
+			border-bottom: $border-value;
+			h1,
+			h3 {
+				font-size: 0.9rem;
+				line-height: 20px;
+				margin: 0;
+				color: rgba($light-color, 0.85);
+			}
+			p {
+				font-size: 0.8rem;
+				margin: 0;
+			}
+		}
+	}
+	&-product {
+		display: none;
+		.js-cart-product.hide-product {
+			display: none !important;
+			transition: 0.8s all ease-in;
+		}
+	}
+
+	&-empty {
+		padding: 30px 15px;
+		margin: 0;
+		font-style: italic;
+		text-align: center;
+
+		&.hide {
+			display: none !important;
+		}
+	}
+
+	&-footer {
+		box-sizing: border-box;
+		position: absolute;
+		background-color: rgba($dark-color, 0.85);
+		width: 100%;
+		padding: 15px;
+		left: 0;
+		bottom: 0;
+		z-index: 2;
+		box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+		text-align: right;
+	}
+
+	&-text {
+		margin: 0;
+
+		.close {
+			display: inline-block;
+			//margin-top: 20px;
+			color: $ruby;
+			padding: 10px 15px;
+		}
+	}
+}

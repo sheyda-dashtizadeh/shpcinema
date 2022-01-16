@@ -1,0 +1,137 @@
+@import "mixins";
+@import "fonts";
+@import "root";
+
+///////////////// navbar /////////////
+
+.carousel {
+	$grandParent: &;
+
+	&-item {
+		#{$grandParent}-caption {
+			bottom: 35%;
+			color: $light-color;
+			font-family: poppi-md;
+
+			h5 {
+				font-size: 8vmin;
+				font-family: poppi-bl;
+				text-transform: uppercase;
+			}
+
+			p {
+				font-size: 0.8rem;
+			}
+
+			& .btn {
+				margin-top: 30px;
+				a {
+					text-decoration: none;
+					@include btn-border-slide($light-color, $ruby, 2px, 0.8s);
+				}
+			}
+		}
+
+		&:nth-child(2),
+		&:nth-child(3) {
+			#{selector-append(".carousel", "-caption")} {
+				left: 66%;
+			}
+		}
+	}
+
+	&-indicators {
+		display: block !important;
+		margin: auto !important;
+		top: 33% !important;
+		left: auto !important;
+		right: 20px !important;
+		height: 200px !important;
+
+		button {
+			display: block;
+			border-radius: 50%;
+			width: 10px !important;
+			height: 10px !important;
+			margin-bottom: -10px !important;
+		}
+	}
+}
+
+.main-content {
+	& > section {
+		margin: 20px auto;
+	}
+
+	#about {
+		padding-bottom: 8vh;
+		h5 {
+			margin: 50px 0;
+			text-align: center;
+			color: $plum !important;
+			font-family: poppi-bl;
+			font-size: 2vw;
+		}
+	}
+
+	.profile {
+		&_person {
+			background-color: rgba($light-color, 0.05);
+			width: 300px;
+			border-radius: 2px;
+			overflow: hidden;
+			box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+				0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+			position: relative;
+			margin: auto;
+
+			.social li a i {
+				color: $light-plum !important;
+
+				&:hover {
+					color: $plum !important;
+					transition: 0.8s all ease-in-out;
+				}
+			}
+		}
+
+		&_head {
+			padding: 30px 0 20px;
+			text-align: center;
+			z-index: 1;
+			position: relative;
+
+			img {
+				width: 110px;
+				height: 110px;
+				border: 1px solid $plum;
+				border-radius: 100%;
+				padding: 7px;
+				box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.1);
+			}
+			.name {
+				font-weight: 200;
+				font-size: 1vw;
+				color: $light-color;
+				font-family: poppi-md;
+				letter-spacing: 1px;
+				margin: 10px 0 5px;
+			}
+
+			.job {
+				font-weight: 400;
+				font-size: 0.6vw;
+				color: rgba($light-color, 0.8);
+				font-family: poppi-md;
+				letter-spacing: 2px;
+			}
+		}
+
+		&_info {
+			padding: 0 30px;
+			text-align: center;
+			color: $gray-color;
+			font-size: 1vw;
+		}
+	}
+}

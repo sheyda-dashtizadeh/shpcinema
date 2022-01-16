@@ -1,0 +1,270 @@
+@import "root";
+@import "mixins";
+
+.hero {
+	height: 400px;
+	width: 100%;
+	position: relative;
+	background: url(../img/mov-bg.jpg) no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	> .container,
+	.row {
+		height: 100%;
+		margin: 0 auto !important;
+	}
+
+	> .row {
+		position: relative;
+	}
+
+	&::before {
+		content: "";
+		background-color: rgba($dark-color, 0.89);
+		position: absolute;
+		width: 100%;
+		height: 100%;
+	}
+
+	&_content {
+		padding-top: 12%;
+		z-index: 2;
+		text-align: center;
+		color: $light-color;
+
+		.title {
+			text-transform: uppercase;
+			font-family: ubunto-md;
+		}
+
+		.breadcumb li {
+			display: inline-block;
+			font-family: poppi-md;
+			font-size: 0.8rem;
+
+			> a {
+				text-decoration: none;
+				color: $ruby;
+
+				&::after {
+					content: " \02C3";
+					font-family: poppi-md;
+					margin: 0 10px;
+				}
+			}
+		}
+	}
+}
+
+.catalog {
+	margin: 2vh 0;
+
+	.topbar-filter {
+		color: $light-color;
+		padding: 10px 0;
+		align-items: center;
+		margin-bottom: 30px;
+		border-bottom: $border-value;
+		border-top: $border-value;
+
+		* {
+			margin-left: 10px;
+		}
+
+		label {
+			font-family: poppi-li;
+			color: rgba($light-color, 0.7);
+			font-weight: 300;
+		}
+
+		select {
+			font-family: poppi-md;
+			font-size: 0.85rem;
+			color: $light-color;
+			padding: 0 5px;
+			outline: none;
+			border: none;
+			width: 210px;
+			border-right: $border-value;
+			border-left: $border-value;
+			background-color: transparent !important;
+
+			> option {
+				font-family: poppi-md;
+				font-size: 0.7rem;
+				padding: 5px 2px;
+				background-color: $dark-color;
+
+				&:hover {
+					color: $ruby;
+					transition: 0.8s color ease-in-out;
+				}
+			}
+		}
+	}
+}
+
+.card {
+	width: 18% !important;
+	height: 350px;
+	max-height: max-content;
+	padding: 0 !important;
+	border-radius: 5px !important;
+	border: none !important;
+	margin-right: 2%;
+	margin-bottom: 2rem;
+	background-color: transparent !important;
+
+	&:hover .hvr-inner {
+		opacity: 1;
+		transition: 0.8s all ease-in-out;
+	}
+
+	&-img-top {
+		width: 100%;
+		height: 80%;
+		position: relative;
+
+		.hvr-inner,
+		img {
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: 0;
+		}
+
+		.hvr-inner {
+			position: absolute;
+			text-align: center;
+			background-color: rgba($dark-color, 0.8);
+			padding-top: 135px;
+			opacity: 0;
+
+			> a {
+				text-decoration: none;
+				background-color: $ruby;
+				color: $light-color;
+				padding: 10px;
+				border-radius: 1.3rem;
+			}
+		}
+	}
+
+	&-body {
+		padding: 0 !important;
+	}
+
+	&-title {
+		font-family: poppi-md;
+
+		.movie_name a {
+			color: $light-color;
+			text-decoration: none;
+		}
+	}
+}
+
+.page {
+	&-link {
+		width: fit-content;
+		background-color: rgba($light-color, 0.02) !important;
+		border: $border-value !important;
+		color: $light-color !important;
+	}
+
+	&_active {
+		background-color: rgba($ruby, 0.8) !important;
+	}
+}
+
+.sidebar {
+	// margin-left: 10px;
+
+	.sb-title {
+		color: $light-color;
+		font-family: poppi-md;
+		font-size: 1rem;
+		font-weight: bold;
+		margin-bottom: 30px;
+		padding-bottom: 15px;
+		text-transform: uppercase;
+		border-bottom: $border-value;
+	}
+
+	.form {
+		margin-bottom: 60px;
+		background-color: rgba($light-color, 0.02);
+		border: $border-value;
+		padding: 15px;
+
+		&-it {
+			margin-bottom: 15px;
+			font-family: poppi-md;
+
+			label {
+				color: $light-color;
+				max-width: 100%;
+				display: inline-block;
+				font-size: 0.8rem;
+				margin-bottom: 10px;
+			}
+
+			input {
+				border-radius: 3px !important;
+				height: 40px;
+				border: none;
+				background-color: rgba($light-color, 0.1);
+				color: $light-color;
+
+				&::placeholder {
+					color: $gray-color;
+					font-size: 0.6rem;
+					padding-left: 10px;
+				}
+				&.form-control {
+					padding: 0;
+
+					datalist {
+						color: $light-color;
+						background-color: $dark-color !important;
+					}
+				}
+			}
+			select {
+				border-radius: 3px !important;
+				border: none;
+				background-color: rgba($light-color, 0.1);
+				width: 80%;
+				color: $light-color;
+
+				&::placeholder {
+					color: $gray-color;
+					font-size: 0.6rem;
+					padding-left: 10px;
+				}
+
+				option {
+					color: $light-color;
+					background-color: rgba($dark-color, 0.85);
+					font-size: 0.8rem;
+				}
+			}
+		}
+
+		.submit {
+			color: $light-color;
+			background-color: $ruby;
+			border-radius: 1.3rem;
+		}
+
+		.group-id {
+			.dropdwon {
+				&::after {
+					content: "\f123";
+					color: $gray-color;
+				}
+			}
+		}
+	}
+}

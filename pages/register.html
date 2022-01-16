@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- LINKS -->
+		<link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../assets/scss/register.css" />
+		<link rel="stylesheet" href="../assets/aos/aos.css" />
+		<link rel="stylesheet" href="../assets/css/animate.min.css" />
+
+		<script
+			src="https://kit.fontawesome.com/166560c630.js"
+			crossorigin="anonymous"
+		></script>
+		<link rel="shortcut icon" href="../assets/img/logo.ico" type="image/x-icon" />
+
+		<title>Sign in/up</title>
+	</head>
+	<body>
+		<div class="main-content"></div>
+		<div
+			class="inner-container container-sm animate__animated animate__flipInY animate__slow"
+			id="container"
+		>
+			<!------------------ Start Sign Up  ---------------------->
+			<div class="form-container sign-up" id="form_up">
+				<form class="form">
+					<h1>Create Acount</h1>
+
+					<!-- Sign up with socail Media -->
+					<ul class="social d-flex justify-content-evenly list-unstyled">
+						<li>
+							<a href="#"><i class="fab fa-facebook-f"></i></a>
+						</li>
+						<li>
+							<a href="#"><i class="fab fa-google-plus-g"></i></a>
+						</li>
+						<li>
+							<a href="#"><i class="fab fa-linkedin-in"></i></a>
+						</li>
+					</ul>
+					<!-- End-->
+
+					<!-- Strat Manual Sign up -->
+					<span>or use your email for registration</span>
+					<div class="form-group">
+						<input class="form-control" type="text" placeholder="Name" />
+						<input
+							type="email"
+							class="form-control"
+							aria-describedby="emailHelp"
+							placeholder="Email"
+						/>
+						<input type="password" class="form-control" placeholder="Password" />
+					</div>
+
+					<button type="submit" class="btn btn-signup">Sign Up</button>
+					<!-- End Manual Sign up -->
+				</form>
+			</div>
+			<!------------------ End Sign Up  ---------------------->
+
+			<!------------------ Strat Sign In  ---------------------->
+			<div class="form-container sign-in show" id="form_in">
+				<form class="form">
+					<h1>Sign in</h1>
+
+					<!-- Sign in with socail Media -->
+					<ul class="social d-flex justify-content-evenly list-unstyled">
+						<li>
+							<a href="#"><i class="fab fa-facebook-f"></i></a>
+						</li>
+						<li>
+							<a href="#"><i class="fab fa-google-plus-g"></i></a>
+						</li>
+						<li>
+							<a href="#"><i class="fab fa-linkedin-in"></i></a>
+						</li>
+					</ul>
+					<!-- End -->
+
+					<!-- Start Manual Sign in -->
+					<span>or use your account</span>
+					<div class="form-group">
+						<input
+							type="email"
+							class="form-control"
+							aria-describedby="emailHelp"
+							placeholder="Email"
+						/>
+						<input type="password" class="form-control" placeholder="Password" />
+					</div>
+					<a href="forgot.html">Forgot your password?</a>
+					<button type="submit" class="btn btn-signup">Sign In</button>
+					<!-- End Manual Sign in -->
+				</form>
+			</div>
+			<!------------------ End Sign In  ---------------------->
+
+			<div class="overlay-container">
+				<!------------------ Start Overlay  ---------------------->
+				<div class="overlay">
+					<!------------ Sign In Content ----------->
+					<div
+						class="overlay-panel overlay-left d-flex justify-content-center align-item-center flex-column"
+					>
+						<h1>Welcome Back!</h1>
+						<p>To keep connected with us please login with your personal info</p>
+						<button class="btn btn-ghost" id="signIn">Sign In</button>
+					</div>
+
+					<!------------ Sign Up Content ----------->
+					<div
+						class="overlay-panel overlay-right d-flex justify-content-center align-item-center flex-column"
+					>
+						<h1>Hello!</h1>
+						<p>Enter your personal details and start journey with us</p>
+						<button class="btn btn-ghost" id="signUp">Sign Up</button>
+					</div>
+				</div>
+				<!------------------ End Overlay  ---------------------->
+			</div>
+		</div>
+		<script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+		<script src="../assets/js/core/register.js"></script>
+	</body>
+</html>

@@ -1,0 +1,395 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		  <!------------ links ----------->
+		<link rel="stylesheet" href="../assets/aos/aos.css" />
+		<link rel="stylesheet" href="../assets/css/animate.min.css">
+		<link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../assets/scss/movie.css">
+		
+		<script src="https://kit.fontawesome.com/166560c630.js"crossorigin="anonymous"></script> 
+		<link rel="shortcut icon" href="../assets/img/logo.ico" type="image/x-icon" />
+		<title>Movie Details</title>
+	</head>
+	<body>
+		
+		<!------------------ Start Navbar ---------------------->
+		<nav class="navbar navbar-expand-md navbar-light w-100">
+			<div class="container">
+				<!-- logo -->
+				<a class="navbar-brand" href="#"><span>SHP</span> Cinema</a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<!-- links -->
+				<div class="collapse navbar-collapse" 	id="navbarSupportedContent">
+					
+					<ul class="navbar-nav  m-auto mb-2 mb-lg-2">
+						<li class="nav-item">
+							<a class="nav-link active" aria-current="page" href="home.html#home">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#movie">Movies</a>
+						</li>
+					
+						<li class="nav-item">
+							<a class="nav-link" href="#about">About Us</a>
+						</li>
+
+						</li>
+					</ul>
+
+					<!-- Quick menu -->
+					<form class="d-flex justify-content-center">
+
+						<button type="button" class="btn search d-block navbar-btn" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search"></i></button>
+						<a class="btn" href="register.html"><i class="fas fa-user"></i>
+						</a>
+						
+					</form>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Search Modal -->
+		<div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+  			<div class="modal-dialog">
+    			<div class="modal-content">
+       				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      				<div class="modal-body">
+                    	<form class="navbar-form " role="search">
+							<input type="text" class="form-control" placeholder="Search">
+                      		<button type="submit" class="btn">Search</button>
+                    	</form>
+     				</div>
+      			</div>
+			</div>
+		</div>
+		<!------------------ End Navbar ---------------------->
+		
+		<!------------------ Start Hero ---------------------->
+		<div class="hero">
+			<div class="hero-img">
+			</div>
+			<div class="container col-12">
+				<div class="row">
+					<!----- Short Information ------>
+					<div class="col-md-8 col-sm-12 movie-content">
+						<h1 class="title">The Matrix Resurrections</h1>
+						<p class="year">2021</p>
+						<div class="inf">
+							<span class="time_length">2hr 28 min</span>
+							<span class="genre">Action</span>
+							<span class="genre">Sci-Fi</span>
+						</div>
+						<section class="rating">
+							<i class="fas fa-star"></i>
+							5.7
+						</section>
+						
+					</div>
+					<!----- Cover ------>
+					<div class="col-md-4 col-sm-12 movie-cover" data-aos="flip-left">
+						<img src="../assets/img/TheMatrixResurrections.jpg" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+		<!------------------ End Hero ---------------------->
+
+		<!------------------ Start Movie Information ---------------------->
+		<div class="movie" >
+			<div class="container">
+				<div class="row col-md-9 col-sm-12 col-xs-12">
+
+				<!----- Start Movie Details ------>
+					<div class="col-md-9 col-sm-12 col-xs-12 movie-item" id="review" >
+						<p class="movie-line">
+							Return to a world of two realities: one, everyday life; the other, what lies behind it. To find out if his reality is a construct, to truly know himself, Mr. Anderson will have to choose to follow the white rabbit once more.
+						</p>
+					</div>
+					<div class="col-md-9 col-sm-12 col-xs-12 movie-item">
+						<label >
+							Director
+						</label>
+						<p class="movie-director">
+Lana Wachowski</p>
+</div>
+					<div class="col-md-9 col-sm-12 col-xs-12 movie-item ">
+						<label>
+							Starts
+						</label>
+						<div class="movie-star">
+							<p>Keanu Reeves</p>
+							<p>Carrie-Anne Moss</p>
+							<p>Yahya Abdul-Mateen II</p>
+							</div>
+					</div>
+				<!----- End Movie Details ------>
+
+				<!----- Start Buy Tickets ------>
+					<div class="col-md-9 col-sm-12 col-xs-12 movie-item buy" id="buy">
+						<div class="buy-header d-flex  justify-content-between">
+							<h4>Buy Tickets</h4>
+							<a href="#" class="buy-view js-toggle-cart">View Cart</a>
+						</div>
+						<div class="buy-tickets col-12">
+							<div class="row">
+								<!-- Start Ticket -->
+								<div class="ticket col-md-4 col-sm-6 col-xs-12">
+									<p class="week">Monday</p>
+									<p class="date">2021-01-13</p>
+									<p class="inf"><span class="time">15:00</span>Hall <span class="hall">01</span></p>
+									<p class="price">&#36 <span>25</span></p>
+									<a href="#" class="add-to-cart js-add-product"><i class="fas fa-shopping-cart"></i>Add to cart</a>
+								</div>
+								<!-- End Ticket -->
+								
+								<!-- Start Ticket -->
+								<div class="ticket  col-md-4 col-sm-6 col-xs-12">
+									<p class="week">Monday</p>
+									<p class="date">2021-01-13</p>
+									<p class="inf"><span class="time">15:00</span>Hall <span class="hall">01</span></p>
+									<p class="price">&#36 <span>25</span></p>
+									<a href="#" class="add-to-cart js-add-product"><i class="fas fa-shopping-cart"></i>Add to cart</a>
+								</div>
+								<!-- End Ticket -->
+
+								<!-- Start Ticket -->
+								<div class="ticket  col-md-4 col-sm-6 col-xs-12">
+									<p class="week">Monday</p>
+									<p class="date">2021-01-13</p>
+									<p class="inf"><span class="time">15:00</span>Hall <span class="hall">01</span></p>
+									<p class="price">&#36 <span>25</span></p>
+									<a href="#" class="add-to-cart js-add-product"><i class="fas fa-shopping-cart"></i>Add to cart</a>
+								</div>
+								<!-- End Ticket -->
+								
+								<!-- Start Ticket -->
+								<div class="ticket  col-md-4 col-sm-6 col-xs-12">
+									<p class="week">Monday</p>
+									<p class="date">2021-01-13</p>
+									<p class="inf"><span class="time">15:00</span>Hall <span class="hall">01</span></p>
+									<p class="price">&#36 <span>25</span></p>
+									<a href="#" class="add-to-cart js-add-product"><i class="fas fa-shopping-cart"></i>Add to cart</a>
+								</div>
+								<!-- End Ticket -->
+								
+								<!-- Start Ticket -->
+								<div class="ticket col-md-4 col-sm-6 col-xs-12">
+									<p class="week">Monday</p>
+									<p class="date">2021-01-13</p>
+									<p class="inf"><span class="time">15:00</span>Hall <span class="hall">01</span></p>
+									<p class="price">&#36 <span>25</span></p>
+									<a href="#" class="add-to-cart js-add-product"><i class="fas fa-shopping-cart"></i>Add to cart</a>
+								</div>
+								<!-- End Ticket -->
+								
+							</div>
+						</div>
+					</div>
+					<!----- End Buy Tickets ------>
+
+					<!----- Start Comment ------>
+					<div class="col-md-9 col-sm-12 col-xs-12 movie-item comment-box" id="comments">
+						<form class="comments-form" >
+      						<h4>Add Comment</h4>
+        					<textarea class="add-comment col-md-8 col-sm-12" placeholder="Add comment..." required> </textarea>
+							<button type="submit btn">Add</button>
+						</form>
+						<div class="comment">
+							<!-- Start Comment -->
+							<article class="user-comment">
+								<div class="comment-body">
+									<p class="comment-content">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae voluptates itaque aperiam? Quo dolores dignissimos deserunt voluptatum excepturi id enim?
+									</p>
+									<p class="attribution">by <span class="username">John Doe</span > at <span class="time">14:23pm, 4th Dec 2021</span> </p>
+								  </div>
+							</article> 
+							<!-- End Comment -->
+								
+							<!-- Start Comment -->
+							<article class="user-comment">
+								<div class="comment-body">
+									<p class="comment-content">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae voluptates itaque aperiam? Quo dolores dignissimos deserunt voluptatum excepturi id enim?
+									</p>
+									<p class="attribution">by <span class="username">John Doe</span > at <span class="time">14:23pm, 4th Dec 2021</span> </p>
+								  </div>
+							</article>
+							 <!-- End Comment -->
+								
+							<!-- Start Comment -->
+							<article class="user-comment">
+								<div class="comment-body">
+									<p class="comment-content">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae voluptates itaque aperiam? Quo dolores dignissimos deserunt voluptatum excepturi id enim?
+									</p>
+									<p class="attribution">by <span class="username">John Doe</span > at <span class="time">14:23pm, 4th Dec 2021</span> </p>
+								  </div>
+							</article>   
+							<!-- End Comment -->		
+						</div>
+					</div>
+					<!----- End Comment ------>
+
+				</div>
+			</div>
+		</div>
+		<!------------------ End Movie Information ---------------------->
+
+		<!------------------ Start Shopping Cart ---------------------->
+		<aside class="cart js-cart">
+			
+			<!----- Start Header ------>
+			<div class="cart-header">
+				<h1 class="cart-title">Shopping cart</h1>
+				<p class="cart-text">
+				<a class="close js-toggle-cart" href="#" title="Close cart">
+					Close cart
+				</a>
+				</p>
+			</div>
+			<!----- End Header ------>
+
+			<!----- Start Card ------>
+			<div class="cart-products js-cart-products">
+
+				<!-- empty cart -->
+				<p class="cart-empty js-cart-empty">
+					Add a product to your cart
+				</p>
+				
+				<!-- Purchased Tickets -->
+				<div class="cart-product js-cart-product-template">
+					<!-- Ticket -->
+					<article class="js-cart-product d-flex justify-content-between">
+						<h1>2021-10-12</h1>	
+						<h3>10:30</h3>
+						<a class="js-remove-product" href="#" title="Delete product">
+						<i class="fas fa-trash" aria-hidden="true"></i></i>
+						</a>
+					</article>
+				</div>
+			</div>
+			<!----- End Cart ------>
+
+			<!----- Start Footer ------>
+			<div class="cart-footer">
+				<p class="cart-text">
+				<a class="add-to-cart" href="#" title="Buy products">
+					Buy products
+				</a>
+				</p>
+			</div>
+			<!----- End Footer ------>
+
+		</aside>
+		<!------------------ End Shopping Cart ---------------------->
+		
+		<!------------------ Start Footer ---------------------->
+			<footer class="footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-4 col-lg-5">
+							<div class="row">
+
+								<!----- Start About Company ------>	
+								<div class="col-md-12 col-lg-9 mb-md-0 mb-4">
+									<h2 class="footer-heading">
+										<a class="navbar-brand" href="#"><span>SHP</span> Cinema</a>
+									</h2>
+									<p>
+										Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni quam corrupti debitis adipisci blanditiis repellendus, incidunt porro tempora possimus consectetur.
+									</p>
+
+									<!-- Social Media -->
+									<ul class="list-unstyled social d-flex justify-content-evenly">
+										<li><a href="#" class="py-1 d-block">Facebook</a></li>
+										<li><a href="#" class="py-1 d-block">Twitter</a></li>
+										<li><a href="#" class="py-1 d-block">Instagram</a></li>
+									</ul>
+								</div>
+								<!----- End About Company ------>	
+							</div>
+						</div>
+						<div class="col-md-8 col-lg-7">
+							<div class="row">
+								<!-- Section 1 -->
+								<div class="col-md-3 mb-md-0 mb-4 border-left">
+									<h2 class="footer-heading">Company</h2>
+									<ul class="list-unstyled">
+										<li><a href="register.html" class="py-1 d-block">Login</a></li>
+										<li><a href="#" class="py-1 d-block">Help &amp; Support</a></li>
+									</ul>
+								</div>
+								<!-- Section 2 -->
+								<div class="col-md-3 mb-md-0 mb-4 border-left">
+									<h2 class="footer-heading">About</h2>
+									<ul class="list-unstyled">
+										<li><a href="#about" class="py-1 d-block">Team</a></li>
+										<li><a href="#" class="py-1 d-block">Blog</a></li>
+									</ul>
+								</div>
+								<!-- Section 3 -->
+								<div class="col-md-3 mb-md-0 mb-4 border-left">
+									<h2 class="footer-heading">Legal</h2>
+								
+									<ul class="list-unstyled">
+										<li><a class="mr-md-3" href="#">Terms</a></li>
+										<li><a class="mr-md-3" href="#">Privacy</a></li>
+										<li><a class="mr-md-3" href="#">Compliances</a></li>
+									</ul>
+						
+								</div>
+								
+							</div>
+						</div>
+					</div>
+
+					<!------ Copyright------->
+					<div class="row mt-3 copyright">
+						<div class="col-md-6 col-lg-8">
+							<p class="copyright_text">
+								Copyright &copy;
+								<script>
+									document.write(new Date().getFullYear());
+								</script>
+								All rights reserve.
+							</p>
+						</div>
+					</div>
+				</div>
+			</footer>
+		<!------------------ End Footer ---------------------->
+		
+
+		<!------------ scripts ----------->
+			<script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+			<script src="../assets/aos/aos.js"></script>
+			<script src="../assets/js/core/movie.js"></script>
+			<script src="../assets/js/core/common.js"></script>
+			<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+			<script src="../assets/js/plugins/Jquery/scrollfix.js"></script>
+			<script src="../assets/js/plugins/Jquery/jquery-1.12.4.min.js"></script>
+		<script>
+			AOS.init();
+		</script>
+
+	</body>
+</html>

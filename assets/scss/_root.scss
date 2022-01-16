@@ -1,0 +1,198 @@
+@import "fonts";
+
+$dark-color: #0e0e0e;
+$light-color: #f5f5f5;
+$gray-color: #888;
+$charcoal: #211f1f;
+$ruby: #bf263c;
+$plum: #6a50a7;
+$light-plum: #8067b7;
+$teal: #7db1b1;
+$straw: #edc341;
+$transition-width: width 0.35s ease-in-out;
+$transition-height: height 0.1s ease-in-out;
+$border-value: 1px solid rgba($gray-color, 0.4);
+
+body {
+	background-color: $dark-color !important;
+	scroll-behavior: smooth;
+}
+
+.fas {
+	color: rgba($light-color, 0.85) !important;
+}
+
+.footer {
+	bottom: 0 !important;
+	background-color: rgba($light-color, 0.02);
+	font-family: poppi-md;
+
+	.row {
+		padding-top: 2vh;
+
+		p {
+			font-size: 1.3vw;
+			color: $gray-color;
+		}
+
+		ul > li > a {
+			font-size: 1.05vw;
+			color: $gray-color;
+			text-decoration: none;
+
+			&:hover {
+				color: $light-color;
+				letter-spacing: 0.1px;
+				transition: 0.8s all ease-in-out;
+			}
+		}
+		.border-left {
+			border-left: 2px solid rgba($gray-color, 0.1) !important;
+		}
+	}
+
+	&-heading {
+		color: $light-color;
+		font-size: 1.3vw;
+	}
+
+	.copyright {
+		p {
+			font-size: 0.9vw;
+		}
+	}
+}
+
+.navbar {
+	z-index: 100;
+	position: fixed !important;
+	background: linear-gradient(
+		to right bottom,
+		rgba(14, 8, 8, 85),
+		rgba(255, 255, 255, 0.15)
+	);
+
+	&.scrolled {
+		background: $charcoal !important;
+		transition: 00.8s all ease-in-out;
+	}
+
+	&-brand {
+		color: $ruby !important;
+		font-family: cinzel-bl;
+		font-size: 1rem;
+
+		span {
+			font-size: 1.9rem;
+		}
+	}
+
+	&-nav {
+		.active {
+			background-color: $ruby;
+			padding: 5px 0;
+			border-radius: 205px;
+			max-width: max-content;
+		}
+
+		.nav-link {
+			font-family: poppi-md;
+			color: rgba($light-color, 0.9) !important;
+			font-size: 0.8rem;
+			border-radius: 205px;
+		}
+	}
+
+	&-toggler {
+		color: $plum !important;
+		border-color: $plum !important;
+	}
+}
+
+h1 {
+	font-family: poppi-bl;
+	color: $light-color;
+}
+
+ul li a,
+a {
+	text-decoration: none;
+	color: rgba($light-color, 0.75);
+	font-family: poppi-md;
+	font-size: 0.8rem;
+
+	&:hover {
+		color: rgba($light-color, 1);
+	}
+}
+
+p {
+	font-family: poppi-md;
+	letter-spacing: 0.5px;
+	line-height: 20px;
+	margin: 20px 0 30px;
+}
+
+.modal {
+	$grandParent: &;
+
+	&#searchModal {
+		#{selector-append($grandParent,"-content")} {
+			min-height: 120px;
+			height: 25vh;
+		}
+
+		& button.btn {
+			position: absolute;
+			right: 0;
+		}
+		.form {
+			&-control {
+				position: absolute;
+			}
+		}
+	}
+
+	&-content {
+		min-height: fit-content;
+		background-color: rgba($dark-color, 0.97) !important;
+
+		.btn-close {
+			background-image: url("../img/btn-close.png") !important;
+			margin: 5px 0 0 10px;
+		}
+	}
+
+	form {
+		position: relative;
+
+		.form-control {
+			color: $light-color;
+			border-radius: 20px;
+			background-color: rgba($light-color, 0.05) !important;
+			border: $border-value;
+
+			&:focus {
+				outline: none !important;
+				border: none !important;
+				box-shadow: 0px 0px 15px 3px rgba($ruby, 0.25) !important;
+			}
+		}
+
+		button {
+			border-radius: 20px;
+			background-color: $ruby;
+			color: $light-color;
+			font-family: poppi-li;
+		}
+	}
+}
+
+.rating {
+	color: rgba($light-color, 0.8);
+	font-size: 0.9rem;
+
+	i {
+		color: $straw !important;
+	}
+}
