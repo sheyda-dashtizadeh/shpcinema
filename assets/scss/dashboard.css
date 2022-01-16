@@ -48,6 +48,31 @@ body {
   scroll-behavior: smooth;
 }
 
+h1 {
+  font-family: poppi-bl;
+  color: #f5f5f5;
+}
+
+ul li a,
+a {
+  text-decoration: none;
+  color: rgba(245, 245, 245, 0.75);
+  font-family: poppi-md;
+  font-size: 0.8rem;
+}
+
+ul li a:hover,
+a:hover {
+  color: whitesmoke;
+}
+
+p {
+  font-family: poppi-md;
+  letter-spacing: 0.5px;
+  line-height: 20px;
+  margin: 20px 0 30px;
+}
+
 .fas {
   color: rgba(245, 245, 245, 0.85) !important;
 }
@@ -137,31 +162,6 @@ body {
   border-color: #6a50a7 !important;
 }
 
-h1 {
-  font-family: poppi-bl;
-  color: #f5f5f5;
-}
-
-ul li a,
-a {
-  text-decoration: none;
-  color: rgba(245, 245, 245, 0.75);
-  font-family: poppi-md;
-  font-size: 0.8rem;
-}
-
-ul li a:hover,
-a:hover {
-  color: whitesmoke;
-}
-
-p {
-  font-family: poppi-md;
-  letter-spacing: 0.5px;
-  line-height: 20px;
-  margin: 20px 0 30px;
-}
-
 .modal#searchModal .modal-content {
   min-height: 120px;
   height: 25vh;
@@ -202,8 +202,8 @@ p {
 .modal form .form-control:focus {
   outline: none !important;
   border: none !important;
-  -webkit-box-shadow: 0px 0px 15px 3px rgba(191, 38, 60, 0.25) !important;
-          box-shadow: 0px 0px 15px 3px rgba(191, 38, 60, 0.25) !important;
+  -webkit-box-shadow: 0px 0px 8px 3px rgba(191, 38, 60, 0.25) !important;
+          box-shadow: 0px 0px 8px 3px rgba(191, 38, 60, 0.25) !important;
 }
 
 .modal form button {

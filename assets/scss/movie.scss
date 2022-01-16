@@ -2,6 +2,8 @@
 body {
 	position: relative;
 }
+
+///////////////// Hero (background) ////////////////
 .hero {
 	height: 100vh;
 	width: 100%;
@@ -29,37 +31,9 @@ body {
 		left: 50%;
 		transform: translate(-50%, -50%);
 	}
-
-	&_content {
-		padding-top: 12%;
-		z-index: 2;
-		text-align: center;
-		color: $light-color;
-
-		.title {
-			text-transform: uppercase;
-			font-family: ubunto-md;
-		}
-
-		.breadcumb li {
-			display: inline-block;
-			font-family: poppi-md;
-			font-size: 0.8rem;
-
-			> a {
-				text-decoration: none;
-				color: $ruby;
-
-				&::after {
-					content: " \02C3";
-					font-family: poppi-md;
-					margin: 0 10px;
-				}
-			}
-		}
-	}
 }
 
+///////////////// Movie Details ////////////////
 .movie {
 	$grandParent: &;
 
@@ -74,7 +48,7 @@ body {
 
 			&.movie-director:hover {
 				color: $plum;
-				transition: 0.8s all ease-in-out;
+				transition: $transition-value;
 			}
 		}
 
@@ -85,13 +59,15 @@ body {
 				content: ":";
 			}
 		}
+
+		//////// Actors ///////
 		#{selector-append($grandParent, "-star")} {
 			display: inline-block;
 			> p {
 				margin-right: 4px;
 				&:hover {
 					color: $plum;
-					transition: 0.8s all ease-in-out;
+					transition: $transition-value;
 				}
 				&::after {
 					content: " \00B7";
@@ -99,7 +75,10 @@ body {
 				}
 			}
 		}
+
+		//////// Comments Section ///////
 		&.comment-box {
+			//////// Write Comment ///////
 			form {
 				margin: 10px 0;
 
@@ -128,10 +107,12 @@ body {
 				}
 			}
 
+			//////// Other Comments ///////
 			.comment {
 				position: relative;
 				$grandParent: "comment";
 
+				//////// Wtriter ///////
 				#{selector-append(".user-",$grandParent)} {
 					position: relative;
 					&:last-child {
@@ -141,9 +122,10 @@ body {
 						color: $plum;
 						font-size: 1rem;
 						font-weight: bold;
-						transition: 0.9s all ease-in-out;
+						transition: $transition-value;
 					}
 
+					//////// Content ///////
 					.comment-body {
 						.comment-content {
 							padding: 10px;
@@ -160,12 +142,14 @@ body {
 		}
 	}
 
+	//////// Cover ///////
 	&-cover {
 		img {
 			width: 100%;
 		}
 	}
 
+	//////// Top Information ///////
 	&-content {
 		height: fit-content;
 		margin-top: 25vh;
@@ -199,6 +183,7 @@ body {
 	}
 }
 
+///////////////// Avaliable Tickets ////////////////
 .buy {
 	$grandParent: &;
 
@@ -219,6 +204,7 @@ body {
 			display: block;
 		}
 
+		/////// Tickets Detail ////////
 		.week {
 			color: $plum;
 			font-size: 1.5rem;
@@ -253,6 +239,7 @@ body {
 		}
 	}
 
+	/////// Header ////////
 	&-header {
 		align-items: center;
 		margin-bottom: 10px;
@@ -265,6 +252,7 @@ body {
 	}
 }
 
+///////////////// Add to Cart ////////////////
 .add-to-cart {
 	background-color: $plum;
 	padding: 10px;
@@ -274,6 +262,8 @@ body {
 		margin-right: 5px;
 	}
 }
+
+///////////////// Card Section ////////////////
 .cart {
 	position: fixed;
 	background-color: $charcoal;
@@ -288,10 +278,12 @@ body {
 	transition: transform 250ms ease-in-out;
 	z-index: 120;
 
+	/////// Open Cart ////////
 	body.open & {
 		transform: translate(0, 0);
 	}
 
+	/////// Header ////////
 	&-header {
 		position: absolute;
 		background-color: rgba($dark-color, 0.85);
@@ -313,6 +305,8 @@ body {
 		margin: 0;
 		float: left;
 	}
+
+	/////// Selected Tickets ////////
 	&-products {
 		position: absolute;
 		width: 100%;
@@ -338,18 +332,22 @@ body {
 			}
 		}
 	}
+
+	/////// Delete Ticket ////////
 	&-product {
 		display: none;
 		.js-cart-product.hide-product {
 			display: none !important;
-			transition: 0.8s all ease-in;
+			transition: $transition-value;
 		}
 	}
 
+	/////// Empty Card ////////
 	&-empty {
 		padding: 30px 15px;
 		margin: 0;
 		font-style: italic;
+		color: $light-color;
 		text-align: center;
 
 		&.hide {
@@ -357,6 +355,7 @@ body {
 		}
 	}
 
+	/////// Footer ////////
 	&-footer {
 		box-sizing: border-box;
 		position: absolute;
@@ -373,9 +372,9 @@ body {
 	&-text {
 		margin: 0;
 
+		/////// Close Cart ////////
 		.close {
 			display: inline-block;
-			//margin-top: 20px;
 			color: $ruby;
 			padding: 10px 15px;
 		}

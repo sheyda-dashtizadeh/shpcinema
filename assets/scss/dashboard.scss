@@ -5,6 +5,8 @@
 	display: block !important;
 }
 
+//////////////// Dashboard ////////////////
+
 .user {
 	$grandParent: &;
 	padding-top: 130px;
@@ -16,6 +18,7 @@
 
 		border-radius: 5px;
 
+		//////// Avatar ////////
 		#{selector-append($grandParent, "-img")} {
 			text-align: center;
 			padding: 30px 0 20px;
@@ -25,6 +28,8 @@
 				height: 120px;
 			}
 		}
+
+		//////// Update Account ////////
 		#{selector-append($grandParent, "-update")} {
 			.logout {
 				display: inline-block;
@@ -38,6 +43,7 @@
 		}
 	}
 
+	//////// User Profile ////////
 	&-pro {
 		color: rgba($light-color, 0.9);
 		padding: 30px;
@@ -45,6 +51,7 @@
 		background-color: rgba($light-color, 0.05);
 		display: none;
 
+		//////// User Profile Item ////////
 		&-item {
 			margin-bottom: 10px;
 			label {
@@ -66,11 +73,12 @@
 
 				&:hover {
 					color: $ruby;
-					transition: 0.8s all ease-in-out;
+					transition: $transition-value;
 				}
 			}
 		}
 
+		//////// My Profile ////////
 		.form-it {
 			margin: 10px 0;
 
@@ -110,6 +118,7 @@
 	}
 }
 
+//////// Left Panel (Quick Menu) ////////
 .dashboard {
 	&-item {
 		border-top: $border-value;
@@ -127,6 +136,7 @@
 	}
 }
 
+//////// Purchased Ticket (user) or Available Tickets ////////
 .ticket {
 	$grandParent: &;
 
@@ -136,6 +146,7 @@
 	box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 	min-width: fit-content;
 
+	//////// Cover ////////
 	&-cover {
 		img {
 			height: 230px;
@@ -149,6 +160,7 @@
 		}
 	}
 
+	//////// Ticeket Information ////////
 	&-info {
 		padding: 10px 30px;
 		text-align: center;
@@ -207,6 +219,7 @@
 	}
 }
 
+//////// Table (users, comments) ////////
 .table {
 	$grandParent: &;
 	border-bottom: none !important;
@@ -241,6 +254,7 @@
 	}
 }
 
+//////// Admin Access  ////////
 .admin {
 	&-add {
 		font-family: poppi-md;
@@ -255,6 +269,7 @@
 	}
 }
 
+//////// Add Movie Modal ////////
 .modal {
 	&-content {
 		background-color: $dark-color !important;

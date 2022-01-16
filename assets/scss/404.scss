@@ -7,6 +7,8 @@
 	box-sizing: border-box;
 }
 
+//////////////// Main Style ////////////////
+
 .page-404 {
 	padding: 0;
 	margin: 0;
@@ -16,6 +18,7 @@
 	height: 100vh;
 }
 
+//////////////// Content ////////////////
 .middle-content {
 	height: 100vh;
 	background-color: rgba($dark-color, 0.93);
@@ -27,6 +30,7 @@
 		display: block;
 	}
 
+	//////// ERROR ////////
 	.error {
 		span {
 			color: $light-color;
@@ -41,6 +45,7 @@
 		}
 	}
 
+	//////// Back to Home ////////
 	.back {
 		display: inline-block;
 		background-color: $ruby;
