@@ -14,11 +14,7 @@ $('body').on('click', '.js-remove-product', removeProduct);
 
 function toggleCart(e) {
     e.preventDefault();
-    if (cartOpen) {
-        closeCart();
-        return;
-    }
-    openCart();
+    cartOpen ? closeCart() : openCart();
 }
 
 function openCart() {
