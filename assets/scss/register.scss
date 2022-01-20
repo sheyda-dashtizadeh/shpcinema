@@ -83,6 +83,7 @@ span {
 			outline: none;
 			border: none;
 			border-radius: 10px;
+			color: $light-color !important;
 
 			&::placeholder {
 				font-family: poppi-md;
