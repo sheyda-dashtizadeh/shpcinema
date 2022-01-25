@@ -46,7 +46,7 @@
 						</li>
 					
 						<li class="nav-item">
-							<a class="nav-link" href="hoem.html#about">About Us</a>
+							<a class="nav-link" href="home.html#about">About Us</a>
 						</li>
 
 						</li>
@@ -126,7 +126,7 @@
 										<a href="#myprofile" class="dash-link" onclick="toggler(this)" >My Profile</a>
 									</li>
 									<li>
-										<a href="#purchased" class="dash-link"  onclick="toggler(this)">Tickets Purchased</a>
+										<a href="#purchased" class="dash-link"  onclick="toggler(this)">Tickets</a>
 									</li>
 									<li>
 										<a href="#users" class="dash-link" onclick="toggler(this)">Users</a>
@@ -466,56 +466,67 @@
 							<!------ End Ticket ------->
 						</div>
 						<!------ End Purchased Tickets ------->
-
+						
 					</div>
 				</div>
 			</div>
 		</div>
-
-					<div class="modal fade" id="addMovie" tabindex="-1" aria-labelledby="addMovieLabel" aria-hidden="true">
-  						<div class="modal-dialog">
-    						<div class="modal-content">
-       							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      							<div class="modal-body">
-                    				<form class="navbar-form " role="search">
-										<div class="row">
-											<div class="col-12 form-it">
-												<label>Movie</label>
-												<input type="text" class="form-control" placeholder="Movie Name">
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-md-6 form-it">
-												<label>Price <span>(&#36)</span></label>
-												<input type="number" class="form-control" min="1" >
-											</div>
-											<div class="col-md-6 form-it">
-												<label>Hall</label>
-												<input type="text" class="form-control" placeholder="Hall code"  >
-											</div>
-										</div>
-										
-										<div class="row">
-											<div class="col-md-6 form-it">
-												<label>Date</label>
-												<input type="date" class="form-control" required pattern="\d{4}-\d{2}-\d{2}">
-											</div>
-									
-											<div class="col-md-6 form-it">
-												<label>Time</label>
-												<input type="time" class="form-control" >
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-12 form-it">
-												<button type="submit" class="btn add">Save</button>
-											</div>
-										</div>
-                    				</form>
-     							</div>
-      						</div>
-						</div>
-					</div>
+		
+		<!------------------ Start Add Movie Modal ---------------------->
+		<div class="modal fade" id="addMovie" tabindex="-1" aria-labelledby="addMovieLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					<div class="modal-body">
+						<!------ Add Body ------->
+						<form class="navbar-form " role="search">
+							<div class="row">
+								<!------ Choose Movie ------->
+								<div class="col-12 form-it">
+									<label>Movie</label>
+									<select class="form-control">
+										<option value="choose" disabled selected>Choose a Movie</option>
+										<option value="Encanto">Encanto</option>
+										<option value="no-time-to-die">No Time To Die</option>
+									</select>
+								</div>
+							</div>
+							<div class="row">
+								<!------ Price ------->
+								<div class="col-md-6 form-it">
+									<label>Price <span>(&#36)</span></label>
+									<input type="number" class="form-control" min="1" >
+								</div>
+								<!------ Location ------->
+								<div class="col-md-6 form-it">
+									<label>Hall</label>
+									<input type="text" class="form-control" placeholder="Hall code"  >
+								</div>
+							</div>
+							
+							<div class="row">
+								<!------ Time ------->
+								<div class="col-md-6 form-it">
+									<label>Date</label>
+									<input type="date" class="form-control" required pattern="\d{4}-\d{2}-\d{2}">
+								</div>
+								<div class="col-md-6 form-it">
+									<label>Time</label>
+									<input type="time" class="form-control" >
+								</div>
+							</div>
+							<div class="row">
+								<!------ Add Button ------->
+								<div class="col-12 form-it">
+									<button type="submit" class="btn add">Save</button>
+								</div>
+							</div>
+                    	</form>
+     				</div>
+      			</div>
+			</div>
+		</div>
+		<!------------------ End Add Movie Modal ---------------------->
 
 			<!------------------ Start Footer ---------------------->
 			<footer class="footer">
