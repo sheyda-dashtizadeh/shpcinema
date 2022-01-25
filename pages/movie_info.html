@@ -65,23 +65,29 @@
 				</div>
 			</div>
 		</nav>
-
-		<!-- Search Modal -->
+		
+		<!---------------- Search Modal -------------==-->
 		<div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
-  			<div class="modal-dialog">
-    			<div class="modal-content">
-       				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      				<div class="modal-body">
-                    	<form class="navbar-form " role="search">
-							<input type="text" class="form-control" placeholder="Search">
+			<div class="modal-dialog">
+
+				<!--------- Modal Content ---------- -->
+				<div class="modal-content">
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					<div class="modal-body">
+						  <!--------- Search form ---------- -->
+						  <form class="navbar-form " role="search">
+							  <input type="text" class="form-control" placeholder="Search">
                       		<button type="submit" class="btn">Search</button>
                     	</form>
      				</div>
+					 <!--------- Search Results ---------- -->
 					 <div class="modal-result">
-					<ol class="result list-unstyled">
-						<li class="result-item d-flex justify-content-between">
-							<div class="d-flex align-items-center">
+						 <ol class="result list-unstyled">
+							 <li class="result-item d-flex justify-content-between">
+								 <div class="d-flex align-items-center">
+								<!----- cover ----- -->
 								<img src="../assets/img/Encanto.jpg" alt="" class="result-cover">
+								<!----- info ----- -->
 								<div class="result-info">
 									<a href="movie_info.html">Encanto</a>
 									<p class="year">2021</p>
@@ -90,19 +96,7 @@
 							<div class="read">
 								<a href="movie_info.html" class="btn">Read More</a>
 							</div>
-						</li>
-							<li class="result-item d-flex justify-content-between">
-							<div class="d-flex align-items-center">
-								<img src="../assets/img/Encanto.jpg" alt="" class="result-cover">
-								<div class="result-info">
-									<a href="movie_info.html">Encanto</a>
-									<p class="year">2021</p>
-								</div>
-							</div>
-							<div class="read">
-								<a href="movie_info.html" class="btn">Read More</a>
-							</div>
-						</li>						
+						</li>					
 					</ol>
 				</div>
       			</div>
@@ -173,59 +167,58 @@
 
 				<!----- Start Buy Tickets ------>
 					<section class="col-md-9 col-sm-12 col-xs-12 movie-item buy" id="buy">
-						<div class="buy-header d-flex  justify-content-between">
+						<div class="buy-header">
 							<h4>Buy Tickets</h4>
-							<a href="#" class="buy-view js-toggle-cart">View Cart</a>
 						</div>
 						<div class="buy-tickets col-12">
 							<div class="row">
 								<!-- Start Ticket -->
-								<div class="ticket col-md-4 col-sm-6 col-xs-12">
+								<div class="ticket d-flex flex-column align-items-center col-md-4 col-sm-6 col-xs-12">
 									<p class="week">Monday</p>
 									<p class="date">2021-01-13</p>
 									<p class="inf"><span class="time">15:00</span>Hall <span class="hall">01</span></p>
 									<p class="price">&#36 <span>25</span></p>
-									<a href="#" class="add-to-cart js-add-product"><i class="fas fa-shopping-cart"></i>Add to cart</a>
+									<a href="#" class="buy" data-bs-toggle="modal" data-bs-target="#buyModal"><i class="fas fa-shopping-cart" ></i>Book</a>
 								</div>
 								<!-- End Ticket -->
 								
 								<!-- Start Ticket -->
-								<div class="ticket  col-md-4 col-sm-6 col-xs-12">
+								<div class="ticket d-flex flex-column align-items-center col-md-4 col-sm-6 col-xs-12">
 									<p class="week">Monday</p>
 									<p class="date">2021-01-13</p>
 									<p class="inf"><span class="time">15:00</span>Hall <span class="hall">01</span></p>
 									<p class="price">&#36 <span>25</span></p>
-									<a href="#" class="add-to-cart js-add-product"><i class="fas fa-shopping-cart"></i>Add to cart</a>
+									<a href="#" class="buy" data-bs-toggle="modal" data-bs-target="#buyModal"><i class="fas fa-shopping-cart" ></i>Book</a>
 								</div>
 								<!-- End Ticket -->
 
 								<!-- Start Ticket -->
-								<div class="ticket  col-md-4 col-sm-6 col-xs-12">
+								<div class="ticket d-flex flex-column align-items-center col-md-4 col-sm-6 col-xs-12">
 									<p class="week">Monday</p>
 									<p class="date">2021-01-13</p>
 									<p class="inf"><span class="time">15:00</span>Hall <span class="hall">01</span></p>
 									<p class="price">&#36 <span>25</span></p>
-									<a href="#" class="add-to-cart js-add-product"><i class="fas fa-shopping-cart"></i>Add to cart</a>
+									<a href="#" class="buy" data-bs-toggle="modal" data-bs-target="#buyModal"><i class="fas fa-shopping-cart" ></i>Book</a>
 								</div>
 								<!-- End Ticket -->
 								
 								<!-- Start Ticket -->
-								<div class="ticket  col-md-4 col-sm-6 col-xs-12">
+								<div class="ticket d-flex flex-column align-items-center col-md-4 col-sm-6 col-xs-12">
 									<p class="week">Monday</p>
 									<p class="date">2021-01-13</p>
 									<p class="inf"><span class="time">15:00</span>Hall <span class="hall">01</span></p>
 									<p class="price">&#36 <span>25</span></p>
-									<a href="#" class="add-to-cart js-add-product"><i class="fas fa-shopping-cart"></i>Add to cart</a>
+									<a href="#" class="buy" data-bs-toggle="modal" data-bs-target="#buyModal"><i class="fas fa-shopping-cart" ></i>Book</a>
 								</div>
 								<!-- End Ticket -->
 								
 								<!-- Start Ticket -->
-								<div class="ticket col-md-4 col-sm-6 col-xs-12">
+								<div class="ticket d-flex flex-column align-items-center col-md-4 col-sm-6 col-xs-12">
 									<p class="week">Monday</p>
 									<p class="date">2021-01-13</p>
 									<p class="inf"><span class="time">15:00</span>Hall <span class="hall">01</span></p>
 									<p class="price">&#36 <span>25</span></p>
-									<a href="#" class="add-to-cart js-add-product"><i class="fas fa-shopping-cart"></i>Add to cart</a>
+									<a href="#" class="buy" data-bs-toggle="modal" data-bs-target="#buyModal"><i class="fas fa-shopping-cart" ></i>Book</a>
 								</div>
 								<!-- End Ticket -->
 								
@@ -282,59 +275,39 @@
 			</div>
 		</div>
 		<!------------------ End Movie Information ---------------------->
-
-		<!------------------ Start Shopping Cart ---------------------->
-		<aside class="cart js-cart">
-			
-			<!----- Start Header ------>
-			<div class="cart-header">
-				<h1 class="cart-title">Shopping cart</h1>
-				<p class="cart-text">
-				<a class="close js-toggle-cart" href="" title="Close cart">
-					Close cart
-				</a>
-				</p>
-			</div>
-			<!----- End Header ------>
-
-			<!----- Start Card ------>
-			<div class="cart-products js-cart-products">
-
-				<!-- empty cart -->
-				<p class="cart-empty js-cart-empty">
-					Add a product to your cart
-				</p>
-				
-				<!-- Purchased Tickets -->
-				<div class="cart-product js-cart-product-template">
-					<!-- Ticket -->
-					<article class="js-cart-product d-flex justify-content-between align-items-center">
-						<div class="buy-info">
-							<h1>2021-10-12</h1>	
-							<h3>10:30</h3>
+		
+		<!------------------ Start Buying Modal ---------------------->
+		<div class="modal fade" id="buyModal" tabindex="-1" aria-labelledby="buyLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					<!---------- Buy Body -------->
+					<div class="modal-body d-flex align-items-center justify-content-around">
+						<!---------- Ticket Information -------->
+						<div class="buying-ticket ticket d-flex flex-column col-7">
+							<p class="week">Monday</p>
+							<p class="date">2021-01-13</p>
+							<p class="inf"><span class="time">15:00</span>Hall <span class="hall">01</span></p>
+							<p class="price">&#36 <span>25</span></p>
 						</div>
-						<a class="js-remove-product" href="" title="Delete product">
-						<i class="fas fa-trash" aria-hidden="true"></i>
-						</a>
-					</article>
+						<!---------- Number -------->
+						<form class="navbar-form col-4">
+							<div class="row">
+								<div class="form-it">
+									<fieldset data-quantity>
+    								</fieldset>
+									<!---------- pey section -------->
+									<a href="payment.html" class="btn payment">Go to Payment</a>
+								</div>
+							</div>
+                    	</form>
+					</div>
 				</div>
 			</div>
-			<!----- End Cart ------>
-
-			<!----- Start Footer ------>
-			<div class="cart-footer">
-				<p class="cart-text">
-				<a class="add-to-cart" href="" title="Buy products">
-					Buy products
-				</a>
-				</p>
-			</div>
-			<!----- End Footer ------>
-
-		</aside>
-		<!------------------ End Shopping Cart ---------------------->
-		
-
+		</div>
+		<!------------------ End Buying Modal ---------------------->
+					
+					
 		<!------------------ Start Footer ---------------------->
 			<footer class="footer">
 				<div class="container">
@@ -418,7 +391,7 @@
 			<script src="../assets/bootstrap/js/bootstrap.min.js"></script>
 			<script src="../assets/js/core/common.js"></script>	
 			<script src="https://kit.fontawesome.com/166560c630.js"crossorigin="anonymous"></script> 
-			<script src="../assets/js/core/control-item.js"></script>
+			<script src="../assets/js/core/control-item.js" type="module"></script>
 
 		<script>
 			AOS.init();

@@ -3,6 +3,68 @@ body {
 	position: relative;
 }
 
+/////////////// mixins /////////////////////
+@mixin ticket_style {
+	.ticket {
+		border: $border-value;
+		width: 190px;
+		margin: 10px 0;
+		text-align: center;
+
+		> p {
+			display: block;
+			margin: 20px 0;
+		}
+
+		/////// Tickets Detail ////////
+		.week {
+			color: $plum;
+			font-size: 1.5rem;
+			font-weight: bolder;
+		}
+
+		.date {
+			font-size: 0.9rem;
+		}
+
+		.inf {
+			font-size: 0.7rem;
+
+			.time {
+				padding-right: 7px;
+				margin-right: 7px;
+				border-right: $border-value;
+			}
+
+			.hall {
+				font-size: 0.9rem;
+				font-weight: bold;
+			}
+		}
+
+		.price {
+			span {
+				font-size: 1.5rem;
+				font-weight: bold;
+				text-shadow: -5px 5px 5px $light-plum;
+			}
+		}
+
+		.buy {
+			background-color: $plum;
+			padding: 10px;
+			margin-bottom: 10px;
+			border-radius: 3px;
+			width: 90px;
+			display: inline-block;
+
+			i {
+				margin-right: 5px;
+			}
+		}
+	}
+}
+
 ///////////////// Hero (background) ////////////////
 .hero {
 	height: 100vh;
@@ -193,51 +255,8 @@ body {
 		gap: 2%;
 	}
 
-	.ticket {
-		border: $border-value;
-		width: 190px;
-		margin: 10px 0;
-		padding-bottom: 40px;
-		text-align: center;
-
-		> p {
-			display: block;
-		}
-
-		/////// Tickets Detail ////////
-		.week {
-			color: $plum;
-			font-size: 1.5rem;
-			font-weight: bolder;
-		}
-
-		.date {
-			font-size: 0.9rem;
-		}
-
-		.inf {
-			font-size: 0.7rem;
-
-			.time {
-				padding-right: 7px;
-				margin-right: 7px;
-				border-right: $border-value;
-			}
-
-			.hall {
-				font-size: 0.9rem;
-				font-weight: bold;
-			}
-		}
-
-		.price {
-			span {
-				font-size: 1.5rem;
-				font-weight: bold;
-				text-shadow: -5px 5px 5px $light-plum;
-			}
-		}
-	}
+	/////// ticket Style ////////
+	@include ticket_style();
 
 	/////// Header ////////
 	&-header {
@@ -252,131 +271,101 @@ body {
 	}
 }
 
-///////////////// Add to Cart ////////////////
-.add-to-cart {
-	background-color: $plum;
-	padding: 10px;
-	border-radius: 3px;
+///////////////// Buy modal ////////////////
+.modal#buyModal {
+	/////// Tickets Style //////
+	@include ticket_style();
+	color: rgba($light-color, 0.85);
 
-	i {
-		margin-right: 5px;
-	}
-}
-
-///////////////// Card Section ////////////////
-.cart {
-	position: fixed;
-	background-color: $charcoal;
-	width: 400px;
-	max-width: 70%;
-	height: 100vh;
-	top: 0;
-	right: 0;
-	box-shadow: -2px 0 4px rgba(0, 0, 0, 0.15);
-	overflow: hidden;
-	transform: translate(500px, 0);
-	transition: transform 250ms ease-in-out;
-	z-index: 120;
-
-	/////// Open Cart ////////
-	body.open & {
-		transform: translate(0, 0);
-	}
-
-	/////// Header ////////
-	&-header {
-		position: absolute;
-		background-color: rgba($dark-color, 0.85);
+	/////// Number Input //////
+	[data-quantity] {
+		position: relative;
 		width: 100%;
-		padding: 15px;
-		top: 0;
-		left: 0;
-		overflow: hidden;
-		z-index: 2;
-		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-	}
-	&-text {
-		float: right;
-	}
+		padding: 0;
+		margin: 20px 0;
+		border: 0;
 
-	&-title {
-		font-size: 1.1rem;
-		line-height: 40px;
-		margin: 0;
-		float: left;
-	}
+		input {
+			height: 3.5rem;
+			padding: 0 4rem;
+			border-radius: 2rem;
+			border: 0;
+			color: $light-color;
+			background: rgba($light-plum, 0.8);
+			box-shadow: 0 10px 65px -10px rgba($light-plum, 0.25);
+			text-align: center;
+			width: 100%;
 
-	/////// Selected Tickets ////////
-	&-products {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		padding: 70px 0;
-		overflow-x: hidden;
-		overflow-y: scroll;
-		z-index: 1;
-
-		article {
-			padding: 15px;
-			border-bottom: $border-value;
-			h1,
-			h3 {
-				font-size: 0.9rem;
-				line-height: 20px;
-				margin: 0;
-				color: rgba($light-color, 0.85);
+			&:focus {
+				outline: none;
 			}
-			p {
-				font-size: 0.8rem;
-				margin: 0;
+
+			&[type="number"] {
+				-moz-appearance: textfield;
+				&::-webkit-inner-spin-button,
+				&::-webkit-outer-spin-button {
+					-webkit-appearance: none;
+					margin: 0;
+				}
+			}
+		}
+
+		/////// Up/Down Button //////
+		button {
+			position: absolute;
+			width: 2.8rem;
+			height: 2.8rem;
+			top: 0.4rem;
+			display: block;
+			padding: 0;
+			margin: 0;
+			border: 0;
+			background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="50"><path d="M17 25h16M67 25h16M75 17v16" fill="none" stroke="whitesmoke" stroke-width="1.7px" stroke-linecap="round" stroke-linejoin="round" /></svg>')
+				no-repeat 0 0;
+			background-size: 5.6rem 2.8rem;
+			overflow: hidden;
+			text-indent: 100%;
+			border-radius: 1.4rem;
+			transition: opacity 0.15s;
+			opacity: 0.7;
+
+			&:active {
+				background-position-y: 1px;
+			}
+
+			&:focus {
+				outline: none;
+			}
+
+			&:hover {
+				opacity: 1;
+			}
+
+			&.sub {
+				left: 0.6rem;
+			}
+
+			&.add {
+				right: 0.6rem;
+				background-position-x: -2.8rem;
 			}
 		}
 	}
 
-	/////// Delete Ticket ////////
-	&-product {
-		display: none;
-		.js-cart-product.hide-product {
-			display: none !important;
+	/////// Peyment section //////
+	.payment {
+		color: rgba($light-color, 0.5);
+		font-size: 0.8rem;
+
+		&:hover {
+			color: $ruby;
 			transition: $transition-value;
 		}
-	}
 
-	/////// Empty Card ////////
-	&-empty {
-		padding: 30px 15px;
-		margin: 0;
-		font-style: italic;
-		color: $light-color;
-		text-align: center;
-
-		&.hide {
-			display: none !important;
-		}
-	}
-
-	/////// Footer ////////
-	&-footer {
-		box-sizing: border-box;
-		position: absolute;
-		background-color: rgba($dark-color, 0.85);
-		width: 100%;
-		padding: 15px;
-		left: 0;
-		bottom: 0;
-		z-index: 2;
-		box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
-		text-align: right;
-	}
-
-	&-text {
-		margin: 0;
-
-		/////// Close Cart ////////
-		.close {
-			display: inline-block;
-			color: $ruby;
-			padding: 10px 15px;
+		&::after {
+			content: "\2192 ";
+			color: rgba($light-color, 0.5);
+			margin-left: 5px;
 		}
 	}
 }
