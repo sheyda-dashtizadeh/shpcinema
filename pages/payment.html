@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!------------ links ----------->
+		<link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../assets/css/payment.css" />
+
+		<link rel="shortcut icon" href="../assets/img/logo.ico" type="image/x-icon" />
+		<script
+			src="https://kit.fontawesome.com/166560c630.js"
+			crossorigin="anonymous"
+		></script>
+		<title>Movie Details</title>
+	</head>
+	<body>
+		<div class="container-md">
+			<!------------------ Start Success ---------------------->
+			<div class="success col-7">
+				<div class="success-checkmark">
+					<!--------- icon ----------->
+					<div class="check-icon">
+						<span class="icon-line line-tip"></span>
+						<span class="icon-line line-long"></span>
+						<div class="icon-circle"></div>
+					</div>
+				</div>
+				<p class="success-text">payment completed!</p>
+			</div>
+			<!------------------ End Success ---------------------->
+
+			<!------------------ Start Redirecting ---------------------->
+			<p class="redirect-text">
+				you should be automatically redirecred to home after
+				<span class="redirect-time">5</span> sec, but if you not
+				<a href="home.html" class="redirect-link">Click here</a>.
+			</p>
+			<!------------------ End Redirecting ---------------------->
+		</div>
+
+		<script>
+			setTimeout(function () {
+				window.location.href = "home.html";
+			}, 5000);
+		</script>
+	</body>
+</html>
