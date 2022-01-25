@@ -284,4 +284,12 @@
 			color: $light-color;
 		}
 	}
+
+	select option {
+		color: rgba($light-color, 0.9);
+		background-color: $dark-color;
+		&:hover {
+			background-color: none !important;
+		}
+	}
 }
